@@ -1,0 +1,61 @@
+.title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 60px;
+
+    &_before {
+        position: relative;
+        z-index: 2;
+        padding-left: 10px;
+        @include before_circle;
+    }
+    &__block {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+        font-weight: 700;
+    }
+    &__divider {
+        width: 60px;
+        height: 0px;
+        border: 2px solid #FFA501;
+        margin: 25px auto 0px;
+    }
+    &_fz12 {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    &_fz14 {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: bold;
+    }
+
+    &_fz16 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: bold;
+    }
+
+    &_fz20 {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    &_fz48 {
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: bold;
+    }
+}

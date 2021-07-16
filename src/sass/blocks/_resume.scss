@@ -1,0 +1,100 @@
+.resume {
+    padding-top: 120px;
+
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: 425px 425px;
+        column-gap: 136px;
+    }
+
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 35px;
+
+            &:before {
+                content: '';
+                border-radius: 50px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -7px;
+                width: 15px;
+                height: 15px;
+                background-color: $main-color;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -16px;
+                    left: 0;
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    background-color: #000;
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 43px;
+            height: 1px;
+            background-color: #000;
+            position: absolute;
+            top: 18px;
+        }
+
+        &-head {
+            padding-left: 43px;
+        }
+
+        &-icon {
+            position: relative;
+            @include before_circle;
+
+            &:before {
+                top: 0px;
+            }
+
+            img {
+                display: block;
+                position: absolute;
+                top: 14px;
+                left: 15px;
+            }
+        }
+
+        &-location {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 21px;
+        }
+
+        &-body {
+            padding-left: 45px;
+            margin: 12px 0 0;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+    &__item-location,
+    h4 {
+        padding-left: 60px;
+        margin-bottom: 0;
+    }
+}
